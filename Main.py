@@ -1,6 +1,13 @@
+#coding=utf-8
+import CBDC
+import Account
+import UserInterface
+import Transaction
+import Security
+
 def main():
-    cbdc = CBDC("MyCBDC", 1000)
-    user_interface = UserInterface(cbdc)
+    cbdc = CBDC.CBDC("MyCBDC", 1000)
+    user_interface = UserInterface.UserInterface(cbdc)
 
     while True:
         print("1. Create Account")
@@ -11,8 +18,10 @@ def main():
         if choice == "1":
             user_interface.create_account()
         elif choice == "2":
+            pass
             # Benutzereingaben abfragen und Guthaben abrufen
         elif choice == "3":
+            pass
             # Benutzereingaben abfragen und CBDC übertragen
         else:
             print("Invalid choice.")
